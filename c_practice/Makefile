@@ -54,7 +54,6 @@ ch7: chapter7_file_io.c
 	$(CC) $(CFLAGS) -o chapter7_file_io chapter7_file_io.c
 	./chapter7_file_io
 
-# 清理规则 (兼容 Windows CMD 和 Unix Shell)
+# 清理规则 (Windows)
 clean:
-	-del *.exe 2>NUL
-	-rm -f *.exe
+	if exist *.exe del *.exe
